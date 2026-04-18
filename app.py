@@ -15,7 +15,10 @@ st.set_page_config(page_title="GenAI PDF Chatbot", layout="wide")
 
 st.title("📄🤖 GenAI PDF Chatbot (Gemini)")
 
-api_key = st.text_input("Enter Google API Key", type="password")
+#api_key = st.text_input("Enter Google API Key", type="password")
+import streamlit as st
+
+api_key = st.secrets["GOOGLE_API_KEY"]
 
 # Only proceed if API key is provided
 if api_key:
